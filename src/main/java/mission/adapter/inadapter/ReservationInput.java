@@ -35,7 +35,7 @@ public class ReservationInput implements Input {
 
     public Menu getMenu() {
         try {
-            return Menu.valueOf(Console.readLine().toUpperCase());
+            return Menu.parse(Console.readLine().toUpperCase());
         } catch (Exception e) {
             throw new InvalidFormatException("잘못된 응답입니다.");
         }
