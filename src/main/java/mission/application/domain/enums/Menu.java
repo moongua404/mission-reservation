@@ -3,7 +3,7 @@ package mission.application.domain.enums;
 import java.util.Arrays;
 
 public enum Menu {
-    RESERVE("예약하기"), CHECK_STATUS("예약보기");
+    RESERVE("예약하기"), CHECK_STATUS("예약보기"), TERMINATE("그만하기");
     private final String input;
     Menu(String input) {
         this.input = input;
