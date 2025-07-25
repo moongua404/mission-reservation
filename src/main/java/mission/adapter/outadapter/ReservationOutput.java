@@ -11,11 +11,15 @@ public class ReservationOutput implements Logger {
         System.out.println(message.getMessage());
     }
 
+    public void log(String message) {
+        System.out.println(message);
+    }
+
     public void getCalendar(List<Reservation> reservations) {
         System.out.printf(""
                 + "|예약 시간\t\t\t|시작 시간\t\t\t|종료 시간\t\t\t|예약자 명\t|\n"
                 + "|-------------------|-------------------|-------------------|-----------|\n");
-        reservations.forEach(reservation -> System.out.println(String.format("|%s\t|%s\t|%s\t|%s\t\t|",
+        reservations.forEach(reservation -> System.out.println(String.format("|%s\t|%s\t|%s\t|%-10s|",
                 this.formatDate(reservation.getReservationTime()),
                 this.formatDate(reservation.getStartAt()),
                 this.formatDate(reservation.getEndAt()),
