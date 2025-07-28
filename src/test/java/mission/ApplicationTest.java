@@ -13,7 +13,7 @@ public class ApplicationTest extends TestEnvironment {
     @Test
     @Timeout(10)
     void testApplication() {
-        run(List.of("예약하기", "2025-07-29", "11:00-12:00", "w","에약보기", "그만하기"));
+        run(List.of("예약하기", "2025-07-29", "11:00-12:00", "w","예약보기", "그만하기"));
         assertTrue(output().contains("|2025-07-29 11:00\t|2025-07-29 12:00\t|w         |"));
     }
 
